@@ -55,6 +55,16 @@ body {
 .hand.notransition {
  transition: none;
 }
+.cifer {
+ color: rgb(235, 190, 153);
+ position: absolute;
+ top: 5%;
+ left: 50%;
+ height: 93%;
+}
+.cifer span {
+ position: absolute;
+}
 @media only screen and (max-width: 500px) {
  .clock {
   width: 300px;

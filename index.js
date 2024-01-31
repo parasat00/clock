@@ -2,6 +2,18 @@ const seconds_hand = document.querySelector('.hand.seconds');
 const minutes_hand = document.querySelector('.hand.minutes');
 const hours_hand = document.querySelector('.hand.hours');
 
+const cifers = document.querySelectorAll('.cifer');
+
+function placeCifers() {
+ deg = -3;
+
+ cifers.forEach(cifer => {
+  let span = cifer.children[0];
+  cifer.style.transform=`rotate(${deg}deg)`;
+  span.style.transform=`rotate(${-deg}deg)`;
+  deg += 30;
+ })
+}
 
 function setDate() {
  const now = new Date();
@@ -31,4 +43,5 @@ function setDate() {
  hours_hand.style.transform=`rotate(${hours_deg}deg)`;
 
 }
+placeCifers();
 setInterval(setDate, 1000);
